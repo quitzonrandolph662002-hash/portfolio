@@ -4,6 +4,7 @@ import { categories, works, type Work } from "../data/works";
 import { Reveal } from "./ui/Reveal";
 import { TiltCard } from "./ui/TiltCard";
 import { WorkModal } from "./WorkModal";
+import { asset } from "../lib/asset";
 
 const spanClass: Record<NonNullable<Work["size"]>, string> = {
   tall: "md:row-span-2",
@@ -82,7 +83,7 @@ export function Works() {
                     aria-label={`Открыть ${w.title}`}
                   />
                   <img
-                    src={w.image}
+                    src={asset(w.image)}
                     alt={w.title}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                   />

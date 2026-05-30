@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Suspense, lazy, useRef } from "react";
 import { SafeBoundary } from "./ui/SafeBoundary";
+import { asset } from "../lib/asset";
 
 // 3D is heavy — load it after the rest of the page is interactive.
 const Hero3D = lazy(() => import("./Hero3D").then((m) => ({ default: m.Hero3D })));
@@ -87,7 +88,7 @@ export function Hero() {
           >
             <div className="overflow-hidden rounded-[28px] shadow-2xl shadow-ink/20 ring-1 ring-ink/5">
               <img
-                src="/portfolio/pokrovsky-hero.jpg"
+                src={asset("portfolio/pokrovsky-hero.jpg")}
                 alt="Работа: брошюра Покровский квартал"
                 className="aspect-[4/5] w-full object-cover"
               />

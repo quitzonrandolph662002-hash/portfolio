@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Reveal, RevealText } from "./ui/Reveal";
+import { asset } from "../lib/asset";
 
 const facts = [
   { k: "2022", v: "в дизайне с" },
@@ -64,7 +65,7 @@ export function About() {
                   className="absolute inset-6 overflow-hidden rounded-full ring-4 ring-mint/60"
                 >
                   <img
-                    src="/portfolio/designer.jpg"
+                    src={asset("portfolio/designer.jpg")}
                     alt="Даша — графический дизайнер"
                     className="h-full w-full object-cover"
                   />

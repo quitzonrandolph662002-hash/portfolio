@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import type { Work } from "../data/works";
+import { asset } from "../lib/asset";
 
 export function WorkModal({
   work,
@@ -38,7 +39,7 @@ export function WorkModal({
           >
             <div className="relative overflow-hidden bg-cream">
               <img
-                src={work.image}
+                src={asset(work.image)}
                 alt={work.title}
                 className="h-64 w-full object-cover md:h-full"
               />

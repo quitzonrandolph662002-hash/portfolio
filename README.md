@@ -1,50 +1,47 @@
-# Studio — Портфолио графического дизайнера
+# Даша — портфолио графического и веб-дизайнера
 
-Одностраничный сайт-портфолио с насыщенной анимацией: **React + Vite + TypeScript**,
+Одностраничный сайт-портфолио в эстетике **ваби-саби** (мятно-зелёный + кремовый,
+скруглённые блоки) с насыщенной анимацией: **React + Vite + TypeScript**,
 **Framer Motion**, 3D-сцена на **React Three Fiber**, плавный скролл (Lenis) и
-кастомный курсор.
+кастомный курсор. Сделан по макету из `мое портфолио.cdr`.
 
 ## Запуск
 
 ```bash
 npm install
-npm run dev      # локальная разработка → http://localhost:5173
+npm run dev      # разработка → http://localhost:5173
 npm run build    # сборка в /dist
 npm run preview  # просмотр собранной версии
 ```
 
-## Что внутри
+## Секции
 
 | Секция | Файл | Анимации |
 |--------|------|----------|
 | Прелоадер | `src/components/Loader.tsx` | счётчик 0→100, занавес |
 | Навигация | `src/components/Navbar.tsx` | авто-скрытие, magnetic-кнопка |
-| Hero | `src/components/Hero.tsx` + `Hero3D.tsx` | 3D-сцена (стекло+blob), параллакс, маска текста |
-| Бегущая строка | `src/components/Marquee.tsx` | бесконечный marquee, реакция на скролл |
-| Обо мне | `src/components/About.tsx` | параллакс фото, reveal по словам |
-| Услуги | `src/components/Services.tsx` | интерактивный список с заливкой |
-| Портфолио | `src/components/Works.tsx` | 3D-tilt карточки, фильтр, лайтбокс |
-| Контакты | `src/components/Contact.tsx` | magnetic-email, параллакс |
+| Hero | `src/components/Hero.tsx` + `Hero3D.tsx` | 3D-кольцо и blob'ы, параллакс, маска текста |
+| Бегущая строка | `src/components/Marquee.tsx` | бесконечный marquee |
+| Обо мне | `src/components/About.tsx` | круглое фото + вращающаяся подпись, reveal |
+| Что умею | `src/components/Services.tsx` | интерактивный список + инструменты |
+| Работы | `src/components/Works.tsx` | 3D-tilt карточки, фильтр, лайтбокс |
+| Контакты | `src/components/Contact.tsx` | magnetic-email, мятный блок |
 
-## Как добавить свои изображения
+## Изображения
 
-Реальные работы лежат в `public/portfolio/` как **SVG-заглушки**. Просто
-положите рядом свои файлы (jpg/png/webp) и обновите путь в
-`src/data/works.ts` (поле `image`). Имена для удобства:
+Реальные файлы лежат в `public/portfolio/`:
 
-- `wedding-bd` — приглашение «B & D» (голубое)
-- `wedding-td` — приглашение «Т & Д» (акварель)
-- `wedding-av` — приглашение «А & В» (винтаж)
-- `pokrovsky-brochure` — брошюра «Покровский квартал»
-- `pokrovsky-cards` — визитки «Покровский квартал»
-- `designer` — ваш портрет (секция «Обо мне»)
+- ✅ `designer.jpg` — фото Даши (из PDF)
+- ✅ `pokrovsky-brochure.jpg`, `pokrovsky-cover.jpg`, `pokrovsky-hero.jpg` — брошюра «Покровский квартал» (из PDF)
+- ⏳ `pokrovsky-cards.svg` — визитки (заглушка; пришлите файл)
+- ⏳ `wedding-bd.svg`, `wedding-td.svg`, `wedding-av.svg` — приглашения (заглушки; пришлите файлы)
 
-Пример: положите `public/portfolio/wedding-bd.jpg` и в `works.ts` замените
-`image: "/portfolio/wedding-bd.svg"` → `"/portfolio/wedding-bd.jpg"`.
+Чтобы заменить заглушку: положите файл (jpg/png) в `public/portfolio/` и
+обновите путь `image` в `src/data/works.ts`
+(например `"/portfolio/wedding-bd.svg"` → `"/portfolio/wedding-bd.jpg"`).
 
-## Что нужно отредактировать под себя
+## Что стоит проверить / заменить
 
-- **Текст «Обо мне»** — `src/components/About.tsx` (вставьте текст из вашего файла).
-- **Email и соцсети** — `src/components/Contact.tsx` (сейчас `hello@studio.ru`, ссылки `#`).
-- **Имя/название студии** — `Navbar.tsx`, `Loader.tsx`, `Footer.tsx`.
-- **Список работ** — `src/data/works.ts`.
+- **Контакты** — `src/components/Contact.tsx`: email сейчас `hello@dasha.design`,
+  ссылки на соцсети — заглушки `#`. Впишите реальные.
+- **Текст «Обо мне»** уже вставлен (из присланного текста).

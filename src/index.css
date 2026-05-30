@@ -45,7 +45,7 @@ body {
 }
 
 ::selection {
-  background: theme("colors.terracotta");
+  background: theme("colors.sage");
   color: theme("colors.paper");
 }
 

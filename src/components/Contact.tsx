@@ -16,58 +16,57 @@ export function Contact() {
     target: ref,
     offset: ["start end", "end end"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [120, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [80, 0]);
 
   return (
-    <section
-      id="contact"
-      ref={ref}
-      className="relative overflow-hidden bg-ink px-5 py-28 text-paper md:px-10 md:py-40 grain"
-    >
+    <section id="contact" ref={ref} className="relative px-5 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-[1600px]">
-        <Reveal>
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-terracotta">
-            (04) Контакты
-          </span>
-        </Reveal>
+        <div className="relative overflow-hidden rounded-[40px] bg-mint px-6 py-16 md:px-16 md:py-24">
+          {/* floating cream accents */}
+          <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-butter/70" />
+          <div className="pointer-events-none absolute -bottom-12 left-1/3 h-40 w-40 rounded-[40px] bg-sand/60" />
 
-        <Reveal delay={0.1}>
-          <p className="mt-8 max-w-2xl font-display text-2xl leading-snug text-cream/70 md:text-3xl">
-            Есть проект или просто идея? Напишите — обсудим, как сделать её
-            красивой.
-          </p>
-        </Reveal>
-
-        <motion.div style={{ y }} className="mt-12 md:mt-16">
-          <Magnetic strength={0.25}>
-            <a
-              href="mailto:hello@studio.ru"
-              data-cursor="Написать"
-              className="group inline-block"
-            >
-              <span className="block font-display text-[12vw] leading-none tracking-tightest transition-colors duration-500 group-hover:text-terracotta md:text-[8vw]">
-                hello@studio.ru
+          <div className="relative">
+            <Reveal>
+              <span className="font-mono text-xs uppercase tracking-[0.3em] text-ink/60">
+                (04) Контакты
               </span>
-            </a>
-          </Magnetic>
-        </motion.div>
+            </Reveal>
 
-        <div className="mt-16 flex flex-col justify-between gap-10 border-t border-paper/15 pt-10 md:flex-row md:items-end">
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                className="group relative font-mono text-sm uppercase tracking-widest text-cream/70 transition-colors hover:text-paper"
-              >
-                {s.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-terracotta transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            <Reveal delay={0.1}>
+              <p className="mt-8 max-w-2xl font-display text-2xl leading-snug text-ink md:text-4xl">
+                Есть проект или просто идея? Давайте сделаем её красивой.
+              </p>
+            </Reveal>
+
+            <motion.div style={{ y }} className="mt-10 md:mt-14">
+              <Magnetic strength={0.25}>
+                <a href="mailto:hello@dasha.design" data-cursor="Написать" className="group inline-block">
+                  <span className="block font-display text-[9vw] leading-none tracking-tightest transition-colors duration-500 group-hover:text-paper md:text-[5.5vw]">
+                    hello@dasha.design
+                  </span>
+                </a>
+              </Magnetic>
+            </motion.div>
+
+            <div className="mt-14 flex flex-col justify-between gap-8 border-t border-ink/20 pt-8 md:flex-row md:items-end">
+              <div className="flex flex-wrap gap-x-8 gap-y-3">
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    className="group relative font-mono text-sm uppercase tracking-widest text-ink/70 transition-colors hover:text-ink"
+                  >
+                    {s.label}
+                    <span className="absolute -bottom-1 left-0 h-px w-0 bg-ink transition-all duration-300 group-hover:w-full" />
+                  </a>
+                ))}
+              </div>
+              <p className="max-w-xs font-mono text-xs uppercase tracking-widest text-ink/50">
+                Калининград · работаю удалённо со всем миром
+              </p>
+            </div>
           </div>
-          <p className="max-w-xs font-mono text-xs uppercase tracking-widest text-cream/40">
-            Калининград · работаю удалённо со всем миром
-          </p>
         </div>
       </div>
     </section>

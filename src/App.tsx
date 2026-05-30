@@ -29,7 +29,7 @@ export default function App() {
       {/* scroll progress bar */}
       <motion.div
         style={{ scaleX: progress }}
-        className="fixed inset-x-0 top-0 z-[9999] h-[3px] origin-left bg-terracotta"
+        className="fixed inset-x-0 top-0 z-[9999] h-[3px] origin-left bg-sage"
       />
 
       <Navbar />

@@ -4,21 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#16130F",
-        cream: "#F3EEE4",
-        paper: "#FBF8F1",
-        clay: "#B98A6E",
-        terracotta: "#C06B4A",
-        sage: "#8C9A82",
-        dust: "#8AA1B1",
+        ink: "#2B2A26",
+        paper: "#FBFAF4",
+        cream: "#F2ECCB",
+        butter: "#F4EFD2",
+        mint: "#A9CFC6",
+        sage: "#7FAEA2",
+        sand: "#E7E0CD",
+        clay: "#B79B7E",
       },
       fontFamily: {
-        display: ['"Playfair Display"', "serif"],
-        body: ['"Inter"', "system-ui", "sans-serif"],
+        display: ['"Unbounded"', '"Playfair Display"', "serif"],
+        body: ['"Manrope"', "system-ui", "sans-serif"],
         mono: ['"JetBrains Mono"', "monospace"],
       },
       letterSpacing: {
-        tightest: "-0.06em",
+        tightest: "-0.05em",
+      },
+      borderRadius: {
+        blob: "42% 58% 56% 44% / 48% 42% 58% 52%",
       },
     },
   },

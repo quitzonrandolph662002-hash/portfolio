@@ -34,7 +34,7 @@ export function WorkModal({
           />
           <motion.div
             layoutId={`card-${work.id}`}
-            className="relative z-10 grid max-h-[88vh] w-full max-w-5xl grid-cols-1 overflow-hidden rounded-[3px] bg-paper md:grid-cols-2"
+            className="relative z-10 grid max-h-[88vh] w-full max-w-5xl grid-cols-1 overflow-hidden rounded-[28px] bg-paper md:grid-cols-2"
           >
             <div className="relative overflow-hidden bg-cream">
               <img

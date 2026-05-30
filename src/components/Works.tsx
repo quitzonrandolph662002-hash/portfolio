@@ -26,7 +26,7 @@ export function Works() {
         <div className="mb-12 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <Reveal>
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-terracotta">
+              <span className="font-mono text-xs uppercase tracking-[0.3em] text-sage">
                 (03) Избранные работы
               </span>
             </Reveal>
@@ -73,7 +73,7 @@ export function Works() {
                 className={`group ${spanClass[w.size ?? "normal"]}`}
               >
                 <TiltCard
-                  className="relative h-full min-h-[300px] cursor-pointer overflow-hidden rounded-[3px] bg-cream"
+                  className="relative h-full min-h-[300px] cursor-pointer overflow-hidden rounded-[24px] bg-cream"
                 >
                   <button
                     onClick={() => setSelected(w)}

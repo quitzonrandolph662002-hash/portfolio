@@ -2,12 +2,12 @@ import { motion, useScroll, useTransform, useMotionValue, useAnimationFrame } fr
 import { useRef } from "react";
 
 const items = [
-  "Свадебные приглашения",
   "Фирменный стиль",
   "Полиграфия",
+  "Лендинги",
   "Логотипы",
-  "Вёрстка",
-  "Айдентика",
+  "Веб-дизайн",
+  "Ваби-саби",
 ];
 
 /** Infinite marquee whose speed/direction reacts to scroll velocity. */
@@ -36,7 +36,7 @@ export function Marquee() {
   const x = useTransform(baseX, (v) => `${v}%`);
 
   return (
-    <section className="edge border-b border-ink/15 bg-ink py-6 text-paper">
+    <section className="edge border-b border-ink/15 bg-mint py-6 text-ink">
       <div ref={ref} className="flex overflow-hidden whitespace-nowrap">
         <motion.div style={{ x }} className="flex shrink-0">
           {Array.from({ length: 4 }).map((_, r) => (
@@ -46,7 +46,7 @@ export function Marquee() {
                   <span className="px-8 font-display text-3xl italic md:text-5xl">
                     {it}
                   </span>
-                  <span className="text-terracotta">✦</span>
+                  <span className="text-sage">✦</span>
                 </span>
               ))}
             </div>

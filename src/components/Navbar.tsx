@@ -4,7 +4,7 @@ import { Magnetic } from "./ui/Magnetic";
 
 const links = [
   { label: "Обо мне", to: "#about" },
-  { label: "Услуги", to: "#services" },
+  { label: "Что умею", to: "#services" },
   { label: "Работы", to: "#works" },
   { label: "Контакты", to: "#contact" },
 ];
@@ -30,9 +30,7 @@ export function Navbar() {
     >
       <div
         className={`mx-auto flex max-w-[1600px] items-center justify-between px-5 py-4 transition-colors duration-500 md:px-10 ${
-          solid
-            ? "bg-paper/70 backdrop-blur-md"
-            : "bg-transparent"
+          solid ? "bg-paper/70 backdrop-blur-md" : "bg-transparent"
         }`}
       >
         <a
@@ -40,7 +38,7 @@ export function Navbar() {
           data-scroll-to="#top"
           className="font-display text-xl font-600 tracking-tightest"
         >
-          studio<span className="text-terracotta">.</span>
+          даша<span className="text-sage">.</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -63,8 +61,8 @@ export function Navbar() {
             data-scroll-to="#contact"
             className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-5 py-2 font-mono text-xs uppercase tracking-widest transition-colors hover:bg-ink hover:text-paper"
           >
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-terracotta" />
-            Свободна для заказов
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-sage" />
+            Открыта к проектам
           </a>
         </Magnetic>
       </div>

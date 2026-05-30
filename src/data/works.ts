@@ -6,24 +6,63 @@ export type Work = {
   year: string;
   tags: string[];
   description: string;
-  /** Place your real image at this path inside /public to replace the placeholder. */
+  /** Place your real image at this path inside /public to replace it. */
   image: string;
   /** Accent color used for hover/overlay states. */
   accent: string;
-  /** Optional: how tall the card spans the masonry grid. */
+  /** Optional: how the card spans the grid. */
   size?: "tall" | "wide" | "normal";
 };
 
 export const works: Work[] = [
   {
+    id: "pokrovsky-brochure",
+    title: "Покровский квартал",
+    client: "Девелопер · коттеджный посёлок",
+    category: "Полиграфия",
+    year: "2025",
+    tags: ["Брошюра", "Вёрстка", "Недвижимость"],
+    description:
+      "Рекламная брошюра коттеджного посёлка под Москвой. Обложка с CGI-визуализацией, развороты с типами домов и планировками, строгая модульная сетка.",
+    image: "/portfolio/pokrovsky-brochure.jpg",
+    accent: "#7FAEA2",
+    size: "wide",
+  },
+  {
+    id: "pokrovsky-cover",
+    title: "Покровский — разворот",
+    client: "Девелопер · коттеджный посёлок",
+    category: "Полиграфия",
+    year: "2025",
+    tags: ["Буклет", "Типографика", "Печать"],
+    description:
+      "Разворот буклета: крупные визуализации «3 ТИП» и «4 ТИП», характеристики домов и площади. Подготовка макета к типографской печати.",
+    image: "/portfolio/pokrovsky-cover.jpg",
+    accent: "#B79B7E",
+    size: "normal",
+  },
+  {
+    id: "pokrovsky-cards",
+    title: "Айдентика — визитки",
+    client: "Покровский квартал",
+    category: "Брендинг",
+    year: "2025",
+    tags: ["Логотип", "Визитки", "Айдентика"],
+    description:
+      "Логотип и фирменный стиль: лаконичный знак, корпоративные визитки отдела продаж, единая система в графитово-белой гамме.",
+    image: "/portfolio/pokrovsky-cards.svg",
+    accent: "#2B2A26",
+    size: "normal",
+  },
+  {
     id: "wedding-bd",
     title: "Приглашение «B & D»",
-    client: "Частный заказ",
-    category: "Свадебная полиграфия",
+    client: "Свадебная полиграфия",
+    category: "Полиграфия",
     year: "2026",
     tags: ["Монограмма", "Ботаника", "Печать"],
     description:
-      "Нежное приглашение в пыльно-голубой гамме с гравюрной ботаникой и каллиграфической монограммой. Двусторонний макет: приветствие, тайминг, дресс-код.",
+      "Нежное приглашение в пыльно-голубой гамме: гравюрная ботаника и каллиграфическая монограмма. Двусторонний макет с таймингом и дресс-кодом.",
     image: "/portfolio/wedding-bd.svg",
     accent: "#8AA1B1",
     size: "tall",
@@ -31,8 +70,8 @@ export const works: Work[] = [
   {
     id: "wedding-td",
     title: "Приглашение «Т & Д»",
-    client: "Частный заказ",
-    category: "Свадебная полиграфия",
+    client: "Свадебная полиграфия",
+    category: "Полиграфия",
     year: "2026",
     tags: ["Акварель", "Венок", "Иллюстрация"],
     description:
@@ -44,8 +83,8 @@ export const works: Work[] = [
   {
     id: "wedding-av",
     title: "Приглашение «А & В»",
-    client: "Частный заказ",
-    category: "Свадебная полиграфия",
+    client: "Свадебная полиграфия",
+    category: "Полиграфия",
     year: "2026",
     tags: ["Гравюра", "Винтаж", "Каллиграфия"],
     description:
@@ -54,37 +93,6 @@ export const works: Work[] = [
     accent: "#9DAE94",
     size: "normal",
   },
-  {
-    id: "pokrovsky-brochure",
-    title: "Покровский квартал",
-    client: "Девелопер · коттеджный посёлок",
-    category: "Полиграфия · Брошюра",
-    year: "2025",
-    tags: ["Буклет", "Вёрстка", "Недвижимость"],
-    description:
-      "Рекламная брошюра коттеджного посёлка: обложка с CGI-визуализацией, развороты с типами домов и планировками. Строгая модульная сетка.",
-    image: "/portfolio/pokrovsky-brochure.svg",
-    accent: "#C06B4A",
-    size: "wide",
-  },
-  {
-    id: "pokrovsky-cards",
-    title: "Покровский квартал — айдентика",
-    client: "Девелопер · коттеджный посёлок",
-    category: "Брендинг · Визитки",
-    year: "2025",
-    tags: ["Логотип", "Айдентика", "Визитки"],
-    description:
-      "Логотип и фирменный стиль: лаконичный знак, корпоративные визитки отдела продаж, единая система в графитово-белой гамме.",
-    image: "/portfolio/pokrovsky-cards.svg",
-    accent: "#3C3A38",
-    size: "normal",
-  },
 ];
 
-export const categories = [
-  "Все",
-  "Свадебная полиграфия",
-  "Полиграфия · Брошюра",
-  "Брендинг · Визитки",
-];
+export const categories = ["Все", "Полиграфия", "Брендинг"];

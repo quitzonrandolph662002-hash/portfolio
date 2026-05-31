@@ -4,10 +4,8 @@ import { Magnetic } from "./ui/Magnetic";
 import { Reveal } from "./ui/Reveal";
 
 const socials = [
-  { label: "Telegram", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "Behance", href: "#" },
-  { label: "Pinterest", href: "#" },
+  { label: "Telegram", href: "https://t.me/Dariaiai" },
+  { label: "Instagram", href: "https://instagram.com/daryapovysheva" },
 ];
 
 export function Contact() {
@@ -41,9 +39,9 @@ export function Contact() {
 
             <motion.div style={{ y }} className="mt-10 md:mt-14">
               <Magnetic strength={0.25}>
-                <a href="mailto:hello@dasha.design" data-cursor="Написать" className="group inline-block">
-                  <span className="block font-display text-[9vw] leading-none tracking-tightest transition-colors duration-500 group-hover:text-paper md:text-[5.5vw]">
-                    hello@dasha.design
+                <a href="mailto:darya.povysheva@bk.ru" data-cursor="Написать" className="group inline-block">
+                  <span className="block break-all font-display text-[8vw] font-600 leading-none tracking-tightest transition-colors duration-500 group-hover:text-paper md:text-[4.5vw]">
+                    darya.povysheva@bk.ru
                   </span>
                 </a>
               </Magnetic>
@@ -55,6 +53,8 @@ export function Contact() {
                   <a
                     key={s.label}
                     href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
                     className="group relative font-mono text-sm uppercase tracking-widest text-ink/70 transition-colors hover:text-ink"
                   >
                     {s.label}

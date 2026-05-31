@@ -115,13 +115,13 @@ export function About() {
               </p>
             </Reveal>
 
-            <div className="mt-10 grid grid-cols-3 gap-4 border-t border-ink/15 pt-8">
+            <div className="mt-10 grid grid-cols-1 gap-6 border-t border-ink/15 pt-8 sm:grid-cols-3 sm:gap-8">
               {facts.map((f, i) => (
-                <Reveal key={f.v} delay={0.15 + i * 0.1}>
-                  <div className="font-display text-lg leading-tight md:text-2xl">
+                <Reveal key={f.v} delay={0.15 + i * 0.1} className="min-w-0">
+                  <div className="break-words font-display text-base font-600 leading-snug md:text-xl">
                     {f.k}
                   </div>
-                  <div className="mt-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">
+                  <div className="mt-2 font-mono text-[10px] uppercase tracking-widest text-ink/50">
                     {f.v}
                   </div>
                 </Reveal>

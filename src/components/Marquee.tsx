@@ -10,26 +10,30 @@ const items = [
   "Ваби-саби",
 ];
 
-/** Infinite marquee whose speed/direction reacts to scroll velocity. */
+// Gentle constant drift (in % of track per second). Low = calm.
+const BASE_SPEED = 2.4;
+
+/** Slow, smooth infinite marquee with a soft scroll-velocity boost. */
 export function Marquee() {
   const baseX = useMotionValue(0);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const prev = useRef(0);
-  const dir = useRef(1);
+  const boost = useRef(0); // smoothed extra speed from scrolling
 
   useAnimationFrame((_, delta) => {
-    // scroll velocity nudges direction
-    const cur = scrollY.get();
-    const v = cur - prev.current;
-    prev.current = cur;
-    if (v > 0.5) dir.current = 1;
-    else if (v < -0.5) dir.current = -1;
+    const dt = Math.min(delta, 64) / 1000; // clamp big frame gaps
 
-    let next = baseX.get() - (delta / 1000) * 60 * dir.current;
-    // wrap within one segment width (-25% of the 4x track)
-    if (next <= -25) next += 25;
-    if (next >= 0) next -= 25;
+    const cur = scrollY.get();
+    const scrolled = Math.abs(cur - prev.current);
+    prev.current = cur;
+
+    // scrolling adds a little speed, then it eases back to the calm base
+    const target = Math.min(scrolled * 4, 14);
+    boost.current += (target - boost.current) * 0.06;
+
+    let next = baseX.get() - dt * (BASE_SPEED + boost.current);
+    if (next <= -25) next += 25; // wrap one segment (4 copies => 25% each)
     baseX.set(next);
   });
 

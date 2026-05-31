@@ -14,9 +14,9 @@ export default {
         clay: "#B79B7E",
       },
       fontFamily: {
-        display: ['"Unbounded"', '"Playfair Display"', "serif"],
-        body: ['"Manrope"', "system-ui", "sans-serif"],
-        mono: ['"JetBrains Mono"', "monospace"],
+        display: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
+        body: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
+        mono: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
       },
       letterSpacing: {
         tightest: "-0.05em",

@@ -4,7 +4,7 @@ import { Reveal, RevealText } from "./ui/Reveal";
 import { asset } from "../lib/asset";
 
 const facts = [
-  { k: "2022", v: "в дизайне с" },
+  { k: "с 2022 года", v: "в дизайне" },
   { k: "«Прогресс дизайн»", v: "рекламное агентство" },
   { k: "ваби-саби", v: "любимая эстетика" },
 ];

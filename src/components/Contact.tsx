@@ -63,7 +63,7 @@ export function Contact() {
                 ))}
               </div>
               <p className="max-w-xs font-mono text-xs uppercase tracking-widest text-ink/50">
-                Калининград · работаю удалённо со всем миром
+                Калининград · работаю удалённо по всему миру
               </p>
             </div>
           </div>

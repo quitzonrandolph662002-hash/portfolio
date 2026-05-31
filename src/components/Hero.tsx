@@ -61,17 +61,17 @@ export function Hero() {
 
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-12">
           <h1 className="col-span-1 font-display font-500 leading-[0.92] tracking-tightest md:col-span-8">
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.16em] -mb-[0.16em]">
               <motion.span variants={line} custom={0} initial="hidden" animate="show" className="block text-[13vw] md:text-[8.5vw]">
                 Графический
               </motion.span>
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.16em] -mb-[0.16em]">
               <motion.span variants={line} custom={1} initial="hidden" animate="show" className="block text-[13vw] md:text-[8.5vw]">
                 & <span className="text-sage">веб</span>-дизайн
               </motion.span>
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.16em] -mb-[0.16em]">
               <motion.span variants={line} custom={2} initial="hidden" animate="show" className="block text-[13vw] font-300 italic md:text-[8.5vw]">
                 с любовью к деталям
               </motion.span>

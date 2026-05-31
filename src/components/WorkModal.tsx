@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import type { Work } from "../data/works";
 import { asset } from "../lib/asset";
+import { imgFallback } from "../lib/imgFallback";
 
 export function WorkModal({
   work,
@@ -40,6 +41,7 @@ export function WorkModal({
             <div className="relative overflow-hidden bg-cream">
               <img
                 src={asset(work.image)}
+                onError={imgFallback(work.placeholder)}
                 alt={work.title}
                 className="h-64 w-full object-cover md:h-full"
               />

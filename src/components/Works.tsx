@@ -5,6 +5,7 @@ import { Reveal } from "./ui/Reveal";
 import { TiltCard } from "./ui/TiltCard";
 import { WorkModal } from "./WorkModal";
 import { asset } from "../lib/asset";
+import { imgFallback } from "../lib/imgFallback";
 
 const spanClass: Record<NonNullable<Work["size"]>, string> = {
   tall: "md:row-span-2",
@@ -84,6 +85,7 @@ export function Works() {
                   />
                   <img
                     src={asset(w.image)}
+                    onError={imgFallback(w.placeholder)}
                     alt={w.title}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                   />

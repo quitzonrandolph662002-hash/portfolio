@@ -188,7 +188,7 @@ export const works: Work[] = [
   },
   {
     id: "vizitka-kolyulova",
-    title: "Визитки «Колюлова»",
+    title: "Визитки «Кодолова»",
     client: "Персональный бренд",
     category: "Брендинг",
     year: "2025",

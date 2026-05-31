@@ -101,8 +101,11 @@ export function Works() {
                     <h3 className="font-display text-2xl leading-tight">{w.title}</h3>
                   </div>
                   {/* always-visible corner index */}
-                  <span className="absolute right-5 top-5 z-20 font-mono text-xs text-paper/80 mix-blend-difference">
-                    0{i + 1}
+                  <span
+                    className="absolute right-5 top-5 z-20 font-mono text-xs text-white"
+                    style={{ textShadow: "0 1px 5px rgba(0,0,0,0.5)" }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                 </TiltCard>
               </motion.article>

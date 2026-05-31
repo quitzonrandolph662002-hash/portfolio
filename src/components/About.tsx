@@ -14,6 +14,9 @@ function RotatingBadge() {
   // Circle radius 78 → circumference ≈ 490. textLength forces the phrase to
   // fill exactly one loop, so it never overlaps or leaves a gap at the seam.
   const circumference = 2 * Math.PI * 78;
+  // Trailing " • " completes the last separator so the seam (where the ring
+  // loops back to the first word) is spaced exactly like the others.
+  const ring = "графический дизайн • веб-дизайн • полиграфия • ";
   return (
     <motion.svg
       viewBox="0 0 200 200"
@@ -28,14 +31,14 @@ function RotatingBadge() {
           d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"
         />
       </defs>
-      <text className="fill-ink uppercase" style={{ fontSize: 9 }}>
+      <text className="fill-ink uppercase" style={{ fontSize: 9 }} xmlSpace="preserve">
         <textPath
           href="#circlePath"
           startOffset="0"
           textLength={circumference}
           lengthAdjust="spacing"
         >
-          графический дизайн • веб-дизайн • полиграфия •
+          {ring}
         </textPath>
       </text>
     </motion.svg>

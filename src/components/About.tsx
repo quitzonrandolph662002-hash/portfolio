@@ -11,12 +11,15 @@ const facts = [
 
 /** Circular badge with text running along a circle, slowly rotating. */
 function RotatingBadge() {
+  // Circle radius 78 → circumference ≈ 490. textLength forces the phrase to
+  // fill exactly one loop, so it never overlaps or leaves a gap at the seam.
+  const circumference = 2 * Math.PI * 78;
   return (
     <motion.svg
       viewBox="0 0 200 200"
       className="absolute -inset-6 h-[calc(100%+3rem)] w-[calc(100%+3rem)]"
       animate={{ rotate: 360 }}
-      transition={{ repeat: Infinity, duration: 22, ease: "linear" }}
+      transition={{ repeat: Infinity, duration: 26, ease: "linear" }}
       aria-hidden
     >
       <defs>
@@ -25,9 +28,14 @@ function RotatingBadge() {
           d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"
         />
       </defs>
-      <text className="fill-ink font-mono uppercase" style={{ fontSize: 11, letterSpacing: 4 }}>
-        <textPath href="#circlePath" startOffset="0%">
-          графический дизайн • веб-дизайн • нейросети • полиграфия •
+      <text className="fill-ink uppercase" style={{ fontSize: 9 }}>
+        <textPath
+          href="#circlePath"
+          startOffset="0"
+          textLength={circumference}
+          lengthAdjust="spacing"
+        >
+          графический дизайн • веб-дизайн • полиграфия •
         </textPath>
       </text>
     </motion.svg>

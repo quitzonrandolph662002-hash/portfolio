@@ -23,7 +23,7 @@ export function Works() {
   );
 
   return (
-    <section id="works" className="relative bg-paper px-5 py-28 md:px-10 md:py-40">
+    <section id="works" className="relative bg-paper px-5 pt-16 pb-28 md:px-10 md:pt-20 md:pb-40">
       <div className="mx-auto max-w-[1600px]">
         <div className="mb-12 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>

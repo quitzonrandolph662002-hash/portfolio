@@ -41,13 +41,70 @@ const services = [
   },
 ];
 
-const tools = ["Photoshop", "Illustrator", "CorelDRAW", "Figma", "NanoBanana", "Tilda"];
+type Tool = { name: string; icon: JSX.Element };
+
+const tools: Tool[] = [
+  {
+    name: "Photoshop",
+    icon: (
+      <span className="flex h-full w-full items-center justify-center rounded-[18%] bg-[#001E36] font-display text-lg font-600 text-[#31A8FF]">
+        Ps
+      </span>
+    ),
+  },
+  {
+    name: "Illustrator",
+    icon: (
+      <span className="flex h-full w-full items-center justify-center rounded-[18%] bg-[#330000] font-display text-lg font-600 text-[#FF9A00]">
+        Ai
+      </span>
+    ),
+  },
+  {
+    name: "CorelDRAW",
+    icon: (
+      <span className="flex h-full w-full items-center justify-center rounded-[18%] bg-[#0B3B2E] font-display text-sm font-600 text-[#5BE08F]">
+        Cdr
+      </span>
+    ),
+  },
+  {
+    name: "Figma",
+    icon: (
+      <span className="flex h-full w-full items-center justify-center rounded-[18%] bg-white">
+        <svg viewBox="0 0 38 57" className="h-6 w-auto" aria-hidden>
+          <path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" />
+          <path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" />
+          <path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" />
+          <path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" />
+          <path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" />
+        </svg>
+      </span>
+    ),
+  },
+  {
+    name: "NanoBanana",
+    icon: (
+      <span className="flex h-full w-full items-center justify-center rounded-[18%] bg-[#FFE08A] text-xl">
+        🍌
+      </span>
+    ),
+  },
+  {
+    name: "Tilda",
+    icon: (
+      <span className="flex h-full w-full items-center justify-center rounded-[18%] bg-[#FFC700] font-display text-lg font-700 text-[#1A1A1A]">
+        T
+      </span>
+    ),
+  },
+];
 
 export function Services() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="services" className="relative px-5 py-28 md:px-10 md:py-40">
+    <section id="services" className="relative px-5 pt-28 pb-16 md:px-10 md:pt-40 md:pb-20">
       <div className="mx-auto max-w-[1600px]">
         <div className="mb-16">
           <Reveal>
@@ -134,19 +191,26 @@ export function Services() {
 
         {/* Tools */}
         <Reveal delay={0.1}>
-          <div className="mt-14 flex flex-col gap-5 md:flex-row md:items-center">
+          <div className="mt-16">
             <span className="font-mono text-xs uppercase tracking-widest text-ink/50">
               Инструменты:
             </span>
-            <div className="flex flex-wrap gap-3">
-              {tools.map((t) => (
-                <motion.span
-                  key={t}
-                  whileHover={{ y: -4, backgroundColor: "#A9CFC6" }}
-                  className="rounded-full border border-ink/20 px-5 py-2 font-mono text-sm"
+            <div className="mt-6 grid grid-cols-3 gap-3 sm:grid-cols-6 md:gap-4">
+              {tools.map((t, i) => (
+                <motion.div
+                  key={t.name}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  whileHover={{ y: -6 }}
+                  className="flex flex-col items-center gap-3 rounded-2xl bg-cream/60 p-4 shadow-frame"
                 >
-                  {t}
-                </motion.span>
+                  <div className="h-14 w-14">{t.icon}</div>
+                  <span className="text-center font-mono text-[11px] uppercase tracking-wide text-ink/70">
+                    {t.name}
+                  </span>
+                </motion.div>
               ))}
             </div>
           </div>

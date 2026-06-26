@@ -75,7 +75,7 @@ export function Works() {
                 className={`group ${spanClass[w.size ?? "normal"]}`}
               >
                 <TiltCard
-                  className="relative h-full min-h-[300px] cursor-pointer overflow-hidden rounded-[24px] bg-cream"
+                  className="relative h-full min-h-[300px] cursor-pointer overflow-hidden rounded-[24px] bg-cream shadow-frame"
                 >
                   <button
                     onClick={() => setSelected(w)}

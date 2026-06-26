@@ -4,15 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        // clean, minimal palette from the original mockup
+        // palette sampled directly from the original mockup
         ink: "#23221F",
-        paper: "#F4EEE1", // light beige background
-        cream: "#EAE2D0",
-        butter: "#F3E7A6", // light yellow accent
-        mint: "#93D2C7", // turquoise
-        sage: "#4FA99C", // deeper turquoise
-        sand: "#E7DEC9",
+        paper: "#F3F2E9", // light warm beige background
+        cream: "#EFEBDA",
+        butter: "#F7F2C8", // light yellow accent
+        mint: "#AAD7CE", // turquoise
+        sage: "#4FA192", // deeper turquoise (accents/labels)
+        sand: "#ECE7D6",
         clay: "#B79B7E",
+      },
+      boxShadow: {
+        frame: "0 22px 45px -22px rgba(35,34,31,0.45)",
       },
       fontFamily: {
         // one clean grotesque everywhere (Gilroy-like)

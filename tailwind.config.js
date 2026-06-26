@@ -4,22 +4,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#2B2A26",
-        paper: "#FBFAF4",
-        cream: "#F2ECCB",
-        butter: "#F4EFD2",
-        mint: "#A9CFC6",
-        sage: "#7FAEA2",
-        sand: "#E7E0CD",
+        // clean, minimal palette from the original mockup
+        ink: "#23221F",
+        paper: "#F4EEE1", // light beige background
+        cream: "#EAE2D0",
+        butter: "#F3E7A6", // light yellow accent
+        mint: "#93D2C7", // turquoise
+        sage: "#4FA99C", // deeper turquoise
+        sand: "#E7DEC9",
         clay: "#B79B7E",
       },
       fontFamily: {
-        display: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
-        body: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
-        mono: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
+        // one clean grotesque everywhere (Gilroy-like)
+        display: ['"Onest"', "system-ui", "sans-serif"],
+        body: ['"Onest"', "system-ui", "sans-serif"],
+        mono: ['"Onest"', "system-ui", "sans-serif"],
       },
       letterSpacing: {
-        tightest: "-0.05em",
+        tightest: "-0.03em",
       },
       borderRadius: {
         blob: "42% 58% 56% 44% / 48% 42% 58% 52%",

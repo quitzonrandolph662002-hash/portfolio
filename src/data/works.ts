@@ -34,7 +34,7 @@ export const works: Work[] = [
     id: "wedding-bd",
     title: "Приглашение «B & D»",
     client: "Свадебная полиграфия",
-    category: "Свадебное",
+    category: "Полиграфия",
     year: "2026",
     tags: ["Монограмма", "Ботаника", "Печать"],
     description:
@@ -125,7 +125,7 @@ export const works: Work[] = [
     id: "wedding-td",
     title: "Приглашение «Т & Д»",
     client: "Свадебная полиграфия",
-    category: "Свадебное",
+    category: "Полиграфия",
     year: "2026",
     tags: ["Акварель", "Венок", "Иллюстрация"],
     description:
@@ -164,7 +164,7 @@ export const works: Work[] = [
     id: "stikery-padel",
     title: "Стикеры «Padel & Tennis»",
     client: "Спортивный бренд",
-    category: "Стикеры",
+    category: "Полиграфия",
     year: "2025",
     tags: ["Стикерпак", "Иллюстрация", "Спорт"],
     description:
@@ -203,7 +203,7 @@ export const works: Work[] = [
     id: "wedding-av",
     title: "Приглашение «А & В»",
     client: "Свадебная полиграфия",
-    category: "Свадебное",
+    category: "Полиграфия",
     year: "2026",
     tags: ["Гравюра", "Винтаж", "Каллиграфия"],
     description:
@@ -242,7 +242,7 @@ export const works: Work[] = [
     id: "stikery-anlo",
     title: "Стикерпак «Анло»",
     client: "Анло",
-    category: "Стикеры",
+    category: "Полиграфия",
     year: "2025",
     tags: ["Стикеры", "Иллюстрация", "Бренд"],
     description:
@@ -271,6 +271,5 @@ export const categories = [
   "Брендинг",
   "Полиграфия",
   "Упаковка",
-  "Свадебное",
-  "Стикеры",
+  "Сайты",
 ];

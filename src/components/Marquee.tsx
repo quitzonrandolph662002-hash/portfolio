@@ -47,7 +47,7 @@ export function Marquee() {
             <div key={r} className="flex shrink-0 items-center">
               {items.map((it) => (
                 <span key={`${r}-${it}`} className="flex items-center">
-                  <span className="px-8 font-display text-3xl italic md:text-5xl">
+                  <span className="px-8 font-display text-2xl font-500 uppercase tracking-tight md:text-4xl">
                     {it}
                   </span>
                   <span className="text-sage">✦</span>
